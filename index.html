@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=backspace" />
+</head>
+
+<body>
+
+    <div id="heading">
+        <div><h1>My Calculator</h1></div>
+    </div>
+
+    <div id="calculator">
+
+        <input type="text" id="display" readonly>
+
+        <div class="inputbutten">
+
+            <button class="button" onclick=" CurrentInput = ''; document.querySelector('#display').value = CurrentInput; ">C</button> 
+
+            <button class="button" onclick=" CurrentInput += '('; document.querySelector('#display').value = CurrentInput; ">(</button>
+
+            <button class="button" onclick=" CurrentInput += ')'; document.querySelector('#display').value = CurrentInput; ">)</button>
+
+            <button class="button" style="font-size: 20px;" onclick=" CurrentInput += '/'; document.querySelector('#display').value = CurrentInput; ">÷</button>
+
+            <button class="button" onclick=" CurrentInput += '1'; document.querySelector('#display').value = CurrentInput; "> 1 </button>
+
+            <button class="button" onclick=" CurrentInput += '2'; document.querySelector('#display').value = CurrentInput; "> 2 </button>
+
+            <button class="button" onclick=" CurrentInput += '3'; document.querySelector('#display').value = CurrentInput; "> 3 </button>
+
+            <button class="button" onclick=" CurrentInput += '+'; document.querySelector('#display').value = CurrentInput; "> + </button>
+
+            <button class="button" onclick=" CurrentInput += '4'; document.querySelector('#display').value = CurrentInput; "> 4 </button>
+
+            <button class="button" onclick=" CurrentInput += '5'; document.querySelector('#display').value = CurrentInput; "> 5 </button>
+
+            <button class="button" onclick=" CurrentInput += '6'; document.querySelector('#display').value = CurrentInput; "> 6 </button>
+
+            <button class="button" onclick=" CurrentInput += '-'; document.querySelector('#display').value = CurrentInput; "> - </button>
+
+            <button class="button" onclick=" CurrentInput += '7'; document.querySelector('#display').value = CurrentInput; "> 7 </button>
+
+            <button class="button" onclick=" CurrentInput += '8'; document.querySelector('#display').value = CurrentInput; "> 8 </button>
+
+            <button class="button" onclick=" CurrentInput += '9'; document.querySelector('#display').value = CurrentInput; "> 9 </button>
+
+            <button class="button" onclick=" CurrentInput += '*'; document.querySelector('#display').value = CurrentInput; "> * </button>
+
+            <button class="button" onclick=" CurrentInput += '0'; document.querySelector('#display').value = CurrentInput; "> 0 </button>
+
+            <button class="button" style="font-weight: 900;" onclick=" CurrentInput += '.'; document.querySelector('#display').value = CurrentInput; "> . </button>
+
+            <button class="button" onclick=" CurrentInput = CurrentInput.slice(0, -1); document.querySelector('#display').value = CurrentInput; " > <span class="material-symbols-outlined"> backspace </span> </button>
+
+            <button class="button" onclick=" let result = eval(CurrentInput); CurrentInput = result; document.querySelector('#display').value = CurrentInput; " afterclick=" CurrentInput = ''; document.querySelector('#display').value = CurrentInput; " > = </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        let CurrentInput = '';
+        document.querySelector('#display').value = CurrentInput; 
+    </script>
+
+</body>
+
+</html>
